@@ -1,3 +1,4 @@
+import { Button } from './Button';
 import { SidebarNavLink } from './SidebarNavLink';
 
-export { SidebarNavLink };
+export { Button, SidebarNavLink };

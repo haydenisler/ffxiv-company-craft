@@ -1,10 +1,11 @@
-import { BeakerIcon, HomeIcon } from '@heroicons/react/outline';
+import { BeakerIcon, HomeIcon, UserGroupIcon } from '@heroicons/react/outline';
 import type { FC } from 'react';
 
 import { SidebarNavLink } from '../atoms';
 
 const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'Free Company', href: '/fc', icon: UserGroupIcon },
     { name: 'Debug', href: '/debug', icon: BeakerIcon },
 ];
 
