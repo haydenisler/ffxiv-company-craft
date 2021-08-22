@@ -50,7 +50,7 @@ export const SidebarNavLink: FC<SidebarNavLinkProps> = ({
 
 const styles = {
     div: {
-        base: `flex items-center space-x-2 border-2 p-2 rounded-lg group`,
+        base: `flex items-center space-x-3 border-2 p-2 rounded-lg group`,
         active: `border-secondary bg-secondary-700 `,
         inactive: `cursor-pointer border-transparent hover:bg-secondary-700 hover:border-pink-500`,
     },
@@ -60,7 +60,7 @@ const styles = {
         inactive: `text-secondary-400 group-hover:text-secondary-100`,
     },
     h2: {
-        base: `text-base`,
+        base: `text-base font-medium`,
         active: `text-secondary-100 `,
         inactive: `text-secondary-300 group-hover:text-secondary-100`,
     },
