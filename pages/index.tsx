@@ -9,7 +9,7 @@ const Index = (): JSX.Element => {
             <div className="flex bg-secondary-700 min-h-screen">
                 <Sidebar />
                 <main className="min-h-screen flex-grow">
-                    <header className="py-6"></header>
+                    <header className="py-6 border-b border-secondary"></header>
                     <div></div>
                 </main>
             </div>
