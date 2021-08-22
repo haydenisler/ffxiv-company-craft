@@ -1,12 +1,12 @@
 import Head from 'next/head';
 
-import { Page } from '../src/components/templates';
+import { Page } from '../../src/components/templates';
 
 const Index = (): JSX.Element => {
     return (
         <>
-            <Head>Home</Head>
-            <Page title="Home"></Page>
+            <Head>Debug</Head>
+            <Page title="Debug"></Page>
         </>
     );
 };
