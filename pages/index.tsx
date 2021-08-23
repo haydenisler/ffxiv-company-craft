@@ -8,6 +8,11 @@ const Index = (): JSX.Element => {
     const [data, setData] = useState<unknown>();
 
     const fetcher = useCallback(async () => {
+        await axios({
+            method: 'GET',
+            url: '/api',
+        });
+
         const results = await axios({
             method: 'GET',
             baseURL: 'https://xivapi.com',
