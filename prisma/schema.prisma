@@ -1,0 +1,186 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:../data/ffxiv_company_craft.db"
+}
+
+model company_craft_draft {
+  id                                                                             Int                           @id @default(autoincrement())
+  name                                                                           String?
+  company_craft_draft_category                                                   Int?
+  required_item_0                                                                Int?
+  required_item_count_0                                                          Int?
+  required_item_1                                                                Int?
+  required_item_count_1                                                          Int?
+  required_item_2                                                                Int?
+  required_item_count_2                                                          Int?
+  company_craft_draft_category_company_craft_draftTocompany_craft_draft_category company_craft_draft_category? @relation(fields: [company_craft_draft_category], references: [id])
+  company_craft_sequence                                                         company_craft_sequence[]
+}
+
+model company_craft_draft_category {
+  id                                                                                       Int                      @id @default(autoincrement())
+  name                                                                                     String?
+  company_craft_type_0                                                                     Int?
+  company_craft_type_1                                                                     Int?
+  company_craft_type_2                                                                     Int?
+  company_craft_type_3                                                                     Int?
+  company_craft_type_4                                                                     Int?
+  company_craft_type_5                                                                     Int?
+  company_craft_type_6                                                                     Int?
+  company_craft_type_7                                                                     Int?
+  company_craft_type_8                                                                     Int?
+  company_craft_type_9                                                                     Int?
+  company_craft_type_company_craft_draft_category_company_craft_type_0Tocompany_craft_type company_craft_type?      @relation("company_craft_draft_category_company_craft_type_0Tocompany_craft_type", fields: [company_craft_type_0], references: [id])
+  company_craft_type_company_craft_draft_category_company_craft_type_1Tocompany_craft_type company_craft_type?      @relation("company_craft_draft_category_company_craft_type_1Tocompany_craft_type", fields: [company_craft_type_1], references: [id])
+  company_craft_type_company_craft_draft_category_company_craft_type_2Tocompany_craft_type company_craft_type?      @relation("company_craft_draft_category_company_craft_type_2Tocompany_craft_type", fields: [company_craft_type_2], references: [id])
+  company_craft_type_company_craft_draft_category_company_craft_type_3Tocompany_craft_type company_craft_type?      @relation("company_craft_draft_category_company_craft_type_3Tocompany_craft_type", fields: [company_craft_type_3], references: [id])
+  company_craft_type_company_craft_draft_category_company_craft_type_4Tocompany_craft_type company_craft_type?      @relation("company_craft_draft_category_company_craft_type_4Tocompany_craft_type", fields: [company_craft_type_4], references: [id])
+  company_craft_type_company_craft_draft_category_company_craft_type_5Tocompany_craft_type company_craft_type?      @relation("company_craft_draft_category_company_craft_type_5Tocompany_craft_type", fields: [company_craft_type_5], references: [id])
+  company_craft_type_company_craft_draft_category_company_craft_type_6Tocompany_craft_type company_craft_type?      @relation("company_craft_draft_category_company_craft_type_6Tocompany_craft_type", fields: [company_craft_type_6], references: [id])
+  company_craft_type_company_craft_draft_category_company_craft_type_7Tocompany_craft_type company_craft_type?      @relation("company_craft_draft_category_company_craft_type_7Tocompany_craft_type", fields: [company_craft_type_7], references: [id])
+  company_craft_type_company_craft_draft_category_company_craft_type_8Tocompany_craft_type company_craft_type?      @relation("company_craft_draft_category_company_craft_type_8Tocompany_craft_type", fields: [company_craft_type_8], references: [id])
+  company_craft_type_company_craft_draft_category_company_craft_type_9Tocompany_craft_type company_craft_type?      @relation("company_craft_draft_category_company_craft_type_9Tocompany_craft_type", fields: [company_craft_type_9], references: [id])
+  company_craft_draft                                                                      company_craft_draft[]
+  company_craft_sequence                                                                   company_craft_sequence[]
+}
+
+model company_craft_part {
+  id                                                                                      Int                      @id @default(autoincrement())
+  company_craft_type                                                                      Int?
+  company_craft_process_0                                                                 Int?
+  company_craft_process_1                                                                 Int?
+  company_craft_process_2                                                                 Int?
+  company_craft_process_company_craft_part_company_craft_process_0Tocompany_craft_process company_craft_process?   @relation("company_craft_part_company_craft_process_0Tocompany_craft_process", fields: [company_craft_process_0], references: [id])
+  company_craft_process_company_craft_part_company_craft_process_1Tocompany_craft_process company_craft_process?   @relation("company_craft_part_company_craft_process_1Tocompany_craft_process", fields: [company_craft_process_1], references: [id])
+  company_craft_process_company_craft_part_company_craft_process_2Tocompany_craft_process company_craft_process?   @relation("company_craft_part_company_craft_process_2Tocompany_craft_process", fields: [company_craft_process_2], references: [id])
+  company_craft_type_company_craft_partTocompany_craft_type                               company_craft_type?      @relation(fields: [company_craft_type], references: [id])
+  company_craft_sequence_company_craft_partTocompany_craft_sequence_company_craft_part_0  company_craft_sequence[] @relation("company_craft_partTocompany_craft_sequence_company_craft_part_0")
+  company_craft_sequence_company_craft_partTocompany_craft_sequence_company_craft_part_1  company_craft_sequence[] @relation("company_craft_partTocompany_craft_sequence_company_craft_part_1")
+  company_craft_sequence_company_craft_partTocompany_craft_sequence_company_craft_part_2  company_craft_sequence[] @relation("company_craft_partTocompany_craft_sequence_company_craft_part_2")
+  company_craft_sequence_company_craft_partTocompany_craft_sequence_company_craft_part_3  company_craft_sequence[] @relation("company_craft_partTocompany_craft_sequence_company_craft_part_3")
+  company_craft_sequence_company_craft_partTocompany_craft_sequence_company_craft_part_4  company_craft_sequence[] @relation("company_craft_partTocompany_craft_sequence_company_craft_part_4")
+  company_craft_sequence_company_craft_partTocompany_craft_sequence_company_craft_part_5  company_craft_sequence[] @relation("company_craft_partTocompany_craft_sequence_company_craft_part_5")
+  company_craft_sequence_company_craft_partTocompany_craft_sequence_company_craft_part_6  company_craft_sequence[] @relation("company_craft_partTocompany_craft_sequence_company_craft_part_6")
+  company_craft_sequence_company_craft_partTocompany_craft_sequence_company_craft_part_7  company_craft_sequence[] @relation("company_craft_partTocompany_craft_sequence_company_craft_part_7")
+}
+
+model company_craft_process {
+  id                                                                                        Int                        @id @default(autoincrement())
+  supply_item_0                                                                             Int?
+  set_quantity_0                                                                            Int?
+  sets_required_0                                                                           Int?
+  supply_item_1                                                                             Int?
+  set_quantity_1                                                                            Int?
+  sets_required_1                                                                           Int?
+  supply_item_2                                                                             Int?
+  set_quantity_2                                                                            Int?
+  sets_required_2                                                                           Int?
+  supply_item_3                                                                             Int?
+  set_quantity_3                                                                            Int?
+  sets_required_3                                                                           Int?
+  supply_item_4                                                                             Int?
+  set_quantity_4                                                                            Int?
+  sets_required_4                                                                           Int?
+  supply_item_5                                                                             Int?
+  set_quantity_5                                                                            Int?
+  sets_required_5                                                                           Int?
+  supply_item_6                                                                             Int?
+  set_quantity_6                                                                            Int?
+  sets_required_6                                                                           Int?
+  supply_item_7                                                                             Int?
+  set_quantity_7                                                                            Int?
+  sets_required_7                                                                           Int?
+  supply_item_8                                                                             Int?
+  set_quantity_8                                                                            Int?
+  sets_required_8                                                                           Int?
+  supply_item_9                                                                             Int?
+  set_quantity_9                                                                            Int?
+  sets_required_9                                                                           Int?
+  supply_item_10                                                                            Int?
+  set_quantity_10                                                                           Int?
+  sets_required_10                                                                          Int?
+  supply_item_11                                                                            Int?
+  set_quantity_11                                                                           Int?
+  sets_required_11                                                                          Int?
+  company_craft_supply_item_company_craft_process_supply_item_0Tocompany_craft_supply_item  company_craft_supply_item? @relation("company_craft_process_supply_item_0Tocompany_craft_supply_item", fields: [supply_item_0], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_1Tocompany_craft_supply_item  company_craft_supply_item? @relation("company_craft_process_supply_item_1Tocompany_craft_supply_item", fields: [supply_item_1], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_10Tocompany_craft_supply_item company_craft_supply_item? @relation("company_craft_process_supply_item_10Tocompany_craft_supply_item", fields: [supply_item_10], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_11Tocompany_craft_supply_item company_craft_supply_item? @relation("company_craft_process_supply_item_11Tocompany_craft_supply_item", fields: [supply_item_11], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_2Tocompany_craft_supply_item  company_craft_supply_item? @relation("company_craft_process_supply_item_2Tocompany_craft_supply_item", fields: [supply_item_2], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_3Tocompany_craft_supply_item  company_craft_supply_item? @relation("company_craft_process_supply_item_3Tocompany_craft_supply_item", fields: [supply_item_3], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_4Tocompany_craft_supply_item  company_craft_supply_item? @relation("company_craft_process_supply_item_4Tocompany_craft_supply_item", fields: [supply_item_4], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_5Tocompany_craft_supply_item  company_craft_supply_item? @relation("company_craft_process_supply_item_5Tocompany_craft_supply_item", fields: [supply_item_5], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_6Tocompany_craft_supply_item  company_craft_supply_item? @relation("company_craft_process_supply_item_6Tocompany_craft_supply_item", fields: [supply_item_6], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_7Tocompany_craft_supply_item  company_craft_supply_item? @relation("company_craft_process_supply_item_7Tocompany_craft_supply_item", fields: [supply_item_7], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_8Tocompany_craft_supply_item  company_craft_supply_item? @relation("company_craft_process_supply_item_8Tocompany_craft_supply_item", fields: [supply_item_8], references: [id])
+  company_craft_supply_item_company_craft_process_supply_item_9Tocompany_craft_supply_item  company_craft_supply_item? @relation("company_craft_process_supply_item_9Tocompany_craft_supply_item", fields: [supply_item_9], references: [id])
+  company_craft_part_company_craft_part_company_craft_process_0Tocompany_craft_process      company_craft_part[]       @relation("company_craft_part_company_craft_process_0Tocompany_craft_process")
+  company_craft_part_company_craft_part_company_craft_process_1Tocompany_craft_process      company_craft_part[]       @relation("company_craft_part_company_craft_process_1Tocompany_craft_process")
+  company_craft_part_company_craft_part_company_craft_process_2Tocompany_craft_process      company_craft_part[]       @relation("company_craft_part_company_craft_process_2Tocompany_craft_process")
+}
+
+model company_craft_sequence {
+  id                                                                                 Int                           @id @default(autoincrement())
+  result_item                                                                        Int?
+  category                                                                           Int?
+  company_craft_draft_category                                                       Int?
+  company_craft_type                                                                 Int?
+  company_craft_draft                                                                Int?
+  company_craft_part_0                                                               Int?
+  company_craft_part_1                                                               Int?
+  company_craft_part_2                                                               Int?
+  company_craft_part_3                                                               Int?
+  company_craft_part_4                                                               Int?
+  company_craft_part_5                                                               Int?
+  company_craft_part_6                                                               Int?
+  company_craft_part_7                                                               Int?
+  company_craft_draft_company_craft_draftTocompany_craft_sequence                    company_craft_draft?          @relation(fields: [company_craft_draft], references: [id])
+  company_craft_draft_category_company_craft_draft_categoryTocompany_craft_sequence  company_craft_draft_category? @relation(fields: [company_craft_draft_category], references: [id])
+  company_craft_part_company_craft_partTocompany_craft_sequence_company_craft_part_0 company_craft_part?           @relation("company_craft_partTocompany_craft_sequence_company_craft_part_0", fields: [company_craft_part_0], references: [id])
+  company_craft_part_company_craft_partTocompany_craft_sequence_company_craft_part_1 company_craft_part?           @relation("company_craft_partTocompany_craft_sequence_company_craft_part_1", fields: [company_craft_part_1], references: [id])
+  company_craft_part_company_craft_partTocompany_craft_sequence_company_craft_part_2 company_craft_part?           @relation("company_craft_partTocompany_craft_sequence_company_craft_part_2", fields: [company_craft_part_2], references: [id])
+  company_craft_part_company_craft_partTocompany_craft_sequence_company_craft_part_3 company_craft_part?           @relation("company_craft_partTocompany_craft_sequence_company_craft_part_3", fields: [company_craft_part_3], references: [id])
+  company_craft_part_company_craft_partTocompany_craft_sequence_company_craft_part_4 company_craft_part?           @relation("company_craft_partTocompany_craft_sequence_company_craft_part_4", fields: [company_craft_part_4], references: [id])
+  company_craft_part_company_craft_partTocompany_craft_sequence_company_craft_part_5 company_craft_part?           @relation("company_craft_partTocompany_craft_sequence_company_craft_part_5", fields: [company_craft_part_5], references: [id])
+  company_craft_part_company_craft_partTocompany_craft_sequence_company_craft_part_6 company_craft_part?           @relation("company_craft_partTocompany_craft_sequence_company_craft_part_6", fields: [company_craft_part_6], references: [id])
+  company_craft_part_company_craft_partTocompany_craft_sequence_company_craft_part_7 company_craft_part?           @relation("company_craft_partTocompany_craft_sequence_company_craft_part_7", fields: [company_craft_part_7], references: [id])
+  company_craft_type_company_craft_sequenceTocompany_craft_type                      company_craft_type?           @relation(fields: [company_craft_type], references: [id])
+}
+
+model company_craft_supply_item {
+  id                                                                                    Int                     @id @default(autoincrement())
+  item                                                                                  Int?
+  company_craft_process_company_craft_process_supply_item_0Tocompany_craft_supply_item  company_craft_process[] @relation("company_craft_process_supply_item_0Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_1Tocompany_craft_supply_item  company_craft_process[] @relation("company_craft_process_supply_item_1Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_10Tocompany_craft_supply_item company_craft_process[] @relation("company_craft_process_supply_item_10Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_11Tocompany_craft_supply_item company_craft_process[] @relation("company_craft_process_supply_item_11Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_2Tocompany_craft_supply_item  company_craft_process[] @relation("company_craft_process_supply_item_2Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_3Tocompany_craft_supply_item  company_craft_process[] @relation("company_craft_process_supply_item_3Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_4Tocompany_craft_supply_item  company_craft_process[] @relation("company_craft_process_supply_item_4Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_5Tocompany_craft_supply_item  company_craft_process[] @relation("company_craft_process_supply_item_5Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_6Tocompany_craft_supply_item  company_craft_process[] @relation("company_craft_process_supply_item_6Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_7Tocompany_craft_supply_item  company_craft_process[] @relation("company_craft_process_supply_item_7Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_8Tocompany_craft_supply_item  company_craft_process[] @relation("company_craft_process_supply_item_8Tocompany_craft_supply_item")
+  company_craft_process_company_craft_process_supply_item_9Tocompany_craft_supply_item  company_craft_process[] @relation("company_craft_process_supply_item_9Tocompany_craft_supply_item")
+}
+
+model company_craft_type {
+  id                                                                                                 Int                            @id @default(autoincrement())
+  name                                                                                               String?
+  company_craft_draft_category_company_craft_draft_category_company_craft_type_0Tocompany_craft_type company_craft_draft_category[] @relation("company_craft_draft_category_company_craft_type_0Tocompany_craft_type")
+  company_craft_draft_category_company_craft_draft_category_company_craft_type_1Tocompany_craft_type company_craft_draft_category[] @relation("company_craft_draft_category_company_craft_type_1Tocompany_craft_type")
+  company_craft_draft_category_company_craft_draft_category_company_craft_type_2Tocompany_craft_type company_craft_draft_category[] @relation("company_craft_draft_category_company_craft_type_2Tocompany_craft_type")
+  company_craft_draft_category_company_craft_draft_category_company_craft_type_3Tocompany_craft_type company_craft_draft_category[] @relation("company_craft_draft_category_company_craft_type_3Tocompany_craft_type")
+  company_craft_draft_category_company_craft_draft_category_company_craft_type_4Tocompany_craft_type company_craft_draft_category[] @relation("company_craft_draft_category_company_craft_type_4Tocompany_craft_type")
+  company_craft_draft_category_company_craft_draft_category_company_craft_type_5Tocompany_craft_type company_craft_draft_category[] @relation("company_craft_draft_category_company_craft_type_5Tocompany_craft_type")
+  company_craft_draft_category_company_craft_draft_category_company_craft_type_6Tocompany_craft_type company_craft_draft_category[] @relation("company_craft_draft_category_company_craft_type_6Tocompany_craft_type")
+  company_craft_draft_category_company_craft_draft_category_company_craft_type_7Tocompany_craft_type company_craft_draft_category[] @relation("company_craft_draft_category_company_craft_type_7Tocompany_craft_type")
+  company_craft_draft_category_company_craft_draft_category_company_craft_type_8Tocompany_craft_type company_craft_draft_category[] @relation("company_craft_draft_category_company_craft_type_8Tocompany_craft_type")
+  company_craft_draft_category_company_craft_draft_category_company_craft_type_9Tocompany_craft_type company_craft_draft_category[] @relation("company_craft_draft_category_company_craft_type_9Tocompany_craft_type")
+  company_craft_part                                                                                 company_craft_part[]
+  company_craft_sequence                                                                             company_craft_sequence[]
+}
