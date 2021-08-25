@@ -1,0 +1,185 @@
+import * as Sequelize from 'sequelize';
+import { DataTypes, Model, Optional } from 'sequelize';
+import type { company_craft_draft_category, company_craft_draft_categoryId } from './company_craft_draft_category';
+import type { company_craft_part, company_craft_partId } from './company_craft_part';
+import type { company_craft_sequence, company_craft_sequenceId } from './company_craft_sequence';
+
+export interface company_craft_typeAttributes {
+  id: number;
+  name?: string;
+}
+
+export type company_craft_typePk = "id";
+export type company_craft_typeId = company_craft_type[company_craft_typePk];
+export type company_craft_typeOptionalAttributes = "id" | "name";
+export type company_craft_typeCreationAttributes = Optional<company_craft_typeAttributes, company_craft_typeOptionalAttributes>;
+
+export class company_craft_type extends Model<company_craft_typeAttributes, company_craft_typeCreationAttributes> implements company_craft_typeAttributes {
+  id!: number;
+  name?: string;
+
+  // company_craft_type hasMany company_craft_draft_category via company_craft_type_9
+  company_craft_draft_categories!: company_craft_draft_category[];
+  getCompany_craft_draft_categories!: Sequelize.HasManyGetAssociationsMixin<company_craft_draft_category>;
+  setCompany_craft_draft_categories!: Sequelize.HasManySetAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_draft_category!: Sequelize.HasManyAddAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_draft_categories!: Sequelize.HasManyAddAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  createCompany_craft_draft_category!: Sequelize.HasManyCreateAssociationMixin<company_craft_draft_category>;
+  removeCompany_craft_draft_category!: Sequelize.HasManyRemoveAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  removeCompany_craft_draft_categories!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_draft_category!: Sequelize.HasManyHasAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_draft_categories!: Sequelize.HasManyHasAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  countCompany_craft_draft_categories!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_draft_category via company_craft_type_8
+  company_craft_type_8_company_craft_draft_categories!: company_craft_draft_category[];
+  getCompany_craft_type_8_company_craft_draft_categories!: Sequelize.HasManyGetAssociationsMixin<company_craft_draft_category>;
+  setCompany_craft_type_8_company_craft_draft_categories!: Sequelize.HasManySetAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_8_company_craft_draft_category!: Sequelize.HasManyAddAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_8_company_craft_draft_categories!: Sequelize.HasManyAddAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  createCompany_craft_type_8_company_craft_draft_category!: Sequelize.HasManyCreateAssociationMixin<company_craft_draft_category>;
+  removeCompany_craft_type_8_company_craft_draft_category!: Sequelize.HasManyRemoveAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  removeCompany_craft_type_8_company_craft_draft_categories!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_8_company_craft_draft_category!: Sequelize.HasManyHasAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_8_company_craft_draft_categories!: Sequelize.HasManyHasAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  countCompany_craft_type_8_company_craft_draft_categories!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_draft_category via company_craft_type_7
+  company_craft_type_7_company_craft_draft_categories!: company_craft_draft_category[];
+  getCompany_craft_type_7_company_craft_draft_categories!: Sequelize.HasManyGetAssociationsMixin<company_craft_draft_category>;
+  setCompany_craft_type_7_company_craft_draft_categories!: Sequelize.HasManySetAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_7_company_craft_draft_category!: Sequelize.HasManyAddAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_7_company_craft_draft_categories!: Sequelize.HasManyAddAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  createCompany_craft_type_7_company_craft_draft_category!: Sequelize.HasManyCreateAssociationMixin<company_craft_draft_category>;
+  removeCompany_craft_type_7_company_craft_draft_category!: Sequelize.HasManyRemoveAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  removeCompany_craft_type_7_company_craft_draft_categories!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_7_company_craft_draft_category!: Sequelize.HasManyHasAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_7_company_craft_draft_categories!: Sequelize.HasManyHasAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  countCompany_craft_type_7_company_craft_draft_categories!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_draft_category via company_craft_type_6
+  company_craft_type_6_company_craft_draft_categories!: company_craft_draft_category[];
+  getCompany_craft_type_6_company_craft_draft_categories!: Sequelize.HasManyGetAssociationsMixin<company_craft_draft_category>;
+  setCompany_craft_type_6_company_craft_draft_categories!: Sequelize.HasManySetAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_6_company_craft_draft_category!: Sequelize.HasManyAddAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_6_company_craft_draft_categories!: Sequelize.HasManyAddAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  createCompany_craft_type_6_company_craft_draft_category!: Sequelize.HasManyCreateAssociationMixin<company_craft_draft_category>;
+  removeCompany_craft_type_6_company_craft_draft_category!: Sequelize.HasManyRemoveAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  removeCompany_craft_type_6_company_craft_draft_categories!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_6_company_craft_draft_category!: Sequelize.HasManyHasAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_6_company_craft_draft_categories!: Sequelize.HasManyHasAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  countCompany_craft_type_6_company_craft_draft_categories!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_draft_category via company_craft_type_5
+  company_craft_type_5_company_craft_draft_categories!: company_craft_draft_category[];
+  getCompany_craft_type_5_company_craft_draft_categories!: Sequelize.HasManyGetAssociationsMixin<company_craft_draft_category>;
+  setCompany_craft_type_5_company_craft_draft_categories!: Sequelize.HasManySetAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_5_company_craft_draft_category!: Sequelize.HasManyAddAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_5_company_craft_draft_categories!: Sequelize.HasManyAddAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  createCompany_craft_type_5_company_craft_draft_category!: Sequelize.HasManyCreateAssociationMixin<company_craft_draft_category>;
+  removeCompany_craft_type_5_company_craft_draft_category!: Sequelize.HasManyRemoveAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  removeCompany_craft_type_5_company_craft_draft_categories!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_5_company_craft_draft_category!: Sequelize.HasManyHasAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_5_company_craft_draft_categories!: Sequelize.HasManyHasAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  countCompany_craft_type_5_company_craft_draft_categories!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_draft_category via company_craft_type_4
+  company_craft_type_4_company_craft_draft_categories!: company_craft_draft_category[];
+  getCompany_craft_type_4_company_craft_draft_categories!: Sequelize.HasManyGetAssociationsMixin<company_craft_draft_category>;
+  setCompany_craft_type_4_company_craft_draft_categories!: Sequelize.HasManySetAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_4_company_craft_draft_category!: Sequelize.HasManyAddAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_4_company_craft_draft_categories!: Sequelize.HasManyAddAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  createCompany_craft_type_4_company_craft_draft_category!: Sequelize.HasManyCreateAssociationMixin<company_craft_draft_category>;
+  removeCompany_craft_type_4_company_craft_draft_category!: Sequelize.HasManyRemoveAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  removeCompany_craft_type_4_company_craft_draft_categories!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_4_company_craft_draft_category!: Sequelize.HasManyHasAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_4_company_craft_draft_categories!: Sequelize.HasManyHasAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  countCompany_craft_type_4_company_craft_draft_categories!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_draft_category via company_craft_type_3
+  company_craft_type_3_company_craft_draft_categories!: company_craft_draft_category[];
+  getCompany_craft_type_3_company_craft_draft_categories!: Sequelize.HasManyGetAssociationsMixin<company_craft_draft_category>;
+  setCompany_craft_type_3_company_craft_draft_categories!: Sequelize.HasManySetAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_3_company_craft_draft_category!: Sequelize.HasManyAddAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_3_company_craft_draft_categories!: Sequelize.HasManyAddAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  createCompany_craft_type_3_company_craft_draft_category!: Sequelize.HasManyCreateAssociationMixin<company_craft_draft_category>;
+  removeCompany_craft_type_3_company_craft_draft_category!: Sequelize.HasManyRemoveAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  removeCompany_craft_type_3_company_craft_draft_categories!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_3_company_craft_draft_category!: Sequelize.HasManyHasAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_3_company_craft_draft_categories!: Sequelize.HasManyHasAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  countCompany_craft_type_3_company_craft_draft_categories!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_draft_category via company_craft_type_2
+  company_craft_type_2_company_craft_draft_categories!: company_craft_draft_category[];
+  getCompany_craft_type_2_company_craft_draft_categories!: Sequelize.HasManyGetAssociationsMixin<company_craft_draft_category>;
+  setCompany_craft_type_2_company_craft_draft_categories!: Sequelize.HasManySetAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_2_company_craft_draft_category!: Sequelize.HasManyAddAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_2_company_craft_draft_categories!: Sequelize.HasManyAddAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  createCompany_craft_type_2_company_craft_draft_category!: Sequelize.HasManyCreateAssociationMixin<company_craft_draft_category>;
+  removeCompany_craft_type_2_company_craft_draft_category!: Sequelize.HasManyRemoveAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  removeCompany_craft_type_2_company_craft_draft_categories!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_2_company_craft_draft_category!: Sequelize.HasManyHasAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_2_company_craft_draft_categories!: Sequelize.HasManyHasAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  countCompany_craft_type_2_company_craft_draft_categories!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_draft_category via company_craft_type_1
+  company_craft_type_1_company_craft_draft_categories!: company_craft_draft_category[];
+  getCompany_craft_type_1_company_craft_draft_categories!: Sequelize.HasManyGetAssociationsMixin<company_craft_draft_category>;
+  setCompany_craft_type_1_company_craft_draft_categories!: Sequelize.HasManySetAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_1_company_craft_draft_category!: Sequelize.HasManyAddAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_1_company_craft_draft_categories!: Sequelize.HasManyAddAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  createCompany_craft_type_1_company_craft_draft_category!: Sequelize.HasManyCreateAssociationMixin<company_craft_draft_category>;
+  removeCompany_craft_type_1_company_craft_draft_category!: Sequelize.HasManyRemoveAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  removeCompany_craft_type_1_company_craft_draft_categories!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_1_company_craft_draft_category!: Sequelize.HasManyHasAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_1_company_craft_draft_categories!: Sequelize.HasManyHasAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  countCompany_craft_type_1_company_craft_draft_categories!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_draft_category via company_craft_type_0
+  company_craft_type_0_company_craft_draft_categories!: company_craft_draft_category[];
+  getCompany_craft_type_0_company_craft_draft_categories!: Sequelize.HasManyGetAssociationsMixin<company_craft_draft_category>;
+  setCompany_craft_type_0_company_craft_draft_categories!: Sequelize.HasManySetAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_0_company_craft_draft_category!: Sequelize.HasManyAddAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  addCompany_craft_type_0_company_craft_draft_categories!: Sequelize.HasManyAddAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  createCompany_craft_type_0_company_craft_draft_category!: Sequelize.HasManyCreateAssociationMixin<company_craft_draft_category>;
+  removeCompany_craft_type_0_company_craft_draft_category!: Sequelize.HasManyRemoveAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  removeCompany_craft_type_0_company_craft_draft_categories!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_0_company_craft_draft_category!: Sequelize.HasManyHasAssociationMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  hasCompany_craft_type_0_company_craft_draft_categories!: Sequelize.HasManyHasAssociationsMixin<company_craft_draft_category, company_craft_draft_categoryId>;
+  countCompany_craft_type_0_company_craft_draft_categories!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_part via company_craft_type
+  company_craft_parts!: company_craft_part[];
+  getCompany_craft_parts!: Sequelize.HasManyGetAssociationsMixin<company_craft_part>;
+  setCompany_craft_parts!: Sequelize.HasManySetAssociationsMixin<company_craft_part, company_craft_partId>;
+  addCompany_craft_part!: Sequelize.HasManyAddAssociationMixin<company_craft_part, company_craft_partId>;
+  addCompany_craft_parts!: Sequelize.HasManyAddAssociationsMixin<company_craft_part, company_craft_partId>;
+  createCompany_craft_part!: Sequelize.HasManyCreateAssociationMixin<company_craft_part>;
+  removeCompany_craft_part!: Sequelize.HasManyRemoveAssociationMixin<company_craft_part, company_craft_partId>;
+  removeCompany_craft_parts!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_part, company_craft_partId>;
+  hasCompany_craft_part!: Sequelize.HasManyHasAssociationMixin<company_craft_part, company_craft_partId>;
+  hasCompany_craft_parts!: Sequelize.HasManyHasAssociationsMixin<company_craft_part, company_craft_partId>;
+  countCompany_craft_parts!: Sequelize.HasManyCountAssociationsMixin;
+  // company_craft_type hasMany company_craft_sequence via company_craft_type
+  company_craft_sequences!: company_craft_sequence[];
+  getCompany_craft_sequences!: Sequelize.HasManyGetAssociationsMixin<company_craft_sequence>;
+  setCompany_craft_sequences!: Sequelize.HasManySetAssociationsMixin<company_craft_sequence, company_craft_sequenceId>;
+  addCompany_craft_sequence!: Sequelize.HasManyAddAssociationMixin<company_craft_sequence, company_craft_sequenceId>;
+  addCompany_craft_sequences!: Sequelize.HasManyAddAssociationsMixin<company_craft_sequence, company_craft_sequenceId>;
+  createCompany_craft_sequence!: Sequelize.HasManyCreateAssociationMixin<company_craft_sequence>;
+  removeCompany_craft_sequence!: Sequelize.HasManyRemoveAssociationMixin<company_craft_sequence, company_craft_sequenceId>;
+  removeCompany_craft_sequences!: Sequelize.HasManyRemoveAssociationsMixin<company_craft_sequence, company_craft_sequenceId>;
+  hasCompany_craft_sequence!: Sequelize.HasManyHasAssociationMixin<company_craft_sequence, company_craft_sequenceId>;
+  hasCompany_craft_sequences!: Sequelize.HasManyHasAssociationsMixin<company_craft_sequence, company_craft_sequenceId>;
+  countCompany_craft_sequences!: Sequelize.HasManyCountAssociationsMixin;
+
+  static initModel(sequelize: Sequelize.Sequelize): typeof company_craft_type {
+    company_craft_type.init({
+    id: {
+      autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true
+    },
+    name: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    }
+  }, {
+    sequelize,
+    tableName: 'company_craft_type',
+    timestamps: false
+  });
+  return company_craft_type;
+  }
+}

@@ -1,0 +1,5 @@
+{
+    "storage": "./data/ffxiv_company_craft.db",
+    "dialect": "sqlite",
+    "output": "./models"
+}
